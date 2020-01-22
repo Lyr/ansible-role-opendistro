@@ -1,7 +1,7 @@
 galaxy_info:
-  author: your name
-  description: your role description
-  company: your company (optional)
+  author: Lyr
+  description: role to provide an opendistro cluster (with or not kibana)
+  company: Yl-Co
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
@@ -27,14 +27,14 @@ galaxy_info:
   # To view available platforms and versions (or releases), visit:
   # https://galaxy.ansible.com/api/v1/platforms/
   #
-  # platforms:
+  platforms:
   # - name: Fedora
   #   versions:
   #   - all
   #   - 25
-  # - name: SomePlatform
-  #   versions:
-  #   - all
+  - name: Debian
+     versions:
+     - all
   #   - 1.0
   #   - 7
   #   - 99.99
