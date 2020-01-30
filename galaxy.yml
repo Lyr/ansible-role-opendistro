@@ -1,0 +1,19 @@
+  
+namespace: "lyr"
+name: "development"
+version: "0.0.3"
+readme: "README.md"
+authors:
+  - "Lyr"
+description: "Collection of Opendistro roles"
+license:
+  - "MIT"
+tags:
+  - linux
+  - development
+  - opendistro
+  - collection
+repository: "https://www.github.com/Lyr/ansible-role-opendistro"
+homepage: "https://www.github.com/Lyr/ansible-role-opendistro"
+documentation: "https://www.github.com/Lyr/ansible-role-opendistro"
+issues: "https://www.github.com/Lyr/ansible-role-opendistro/issues"
