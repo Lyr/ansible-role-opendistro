@@ -1,9 +1,9 @@
 name: Publish Ansible Galaxy
 
-on:
-  release:
-    types:
-      - published
+on: [push]
+  # release:
+  #   types:
+  #     - published
 
 jobs:
   build:
