@@ -1,6 +1,6 @@
   
 namespace: "lyr"
-name: "Opendistro Collection"
+name: "OpendistroCollection"
 version: "0.0.4"
 readme: "README.md"
 authors:
