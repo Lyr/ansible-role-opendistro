@@ -1,6 +1,6 @@
   
 namespace: "lyr"
-name: "development"
+name: "Opendistro Collection"
 version: "0.0.3"
 readme: "README.md"
 authors:
@@ -13,6 +13,9 @@ tags:
   - development
   - opendistro
   - collection
+  - kibana
+  - elasticsearch
+  - aws
 repository: "https://www.github.com/Lyr/ansible-role-opendistro"
 homepage: "https://www.github.com/Lyr/ansible-role-opendistro"
 documentation: "https://www.github.com/Lyr/ansible-role-opendistro"
