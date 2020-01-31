@@ -1,9 +1,9 @@
 name: Publish Ansible Galaxy
 
-on: [push]
-  # release:
-  #   types:
-  #     - published
+on:
+  release:
+    types:
+      - published
 
 jobs:
   build:
@@ -23,19 +23,19 @@ jobs:
         pip install --upgrade ansible
     - name: Report Ansible version
       run: ansible --version
+    - name: ansible-lint
+      uses: ansible/ansible-lint-action@v4.1.0.post0
+      with:
+        targets: | 
+          roles/opendistro_elasticsearch/molecule/default/playbook.yml
     - name: Move project to Ansible-required location
       run: |
         cd roles/opendistro_elasticsearch
     - name: Molecule
       uses: gofrolist/molecule-action@master
       with:
-        molecule_options: --debug --base-config molecule/_shared/base.yml
+        molecule_options: --debug 
         molecule_command: test
-    - name: ansible-lint
-      uses: ansible/ansible-lint-action@v4.1.0.post0
-      with:
-        targets: |
-          molecule/default/playbook.yml
     - name: Deploy Ansible Galaxy Collection
       uses: artis3n/ansible_galaxy_collection@v1.0.10
       with:
