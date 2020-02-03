@@ -23,10 +23,10 @@ jobs:
         pip install --upgrade ansible
     - name: Report Ansible version
       run: ansible --version
-    - name: ansible-lint
-      uses: ansible/ansible-lint-action@v4.1.0.post0
-      with:
-        targets: "roles/opendistro_elasticsearch/molecule/default/playbook.yml"
+    # - name: ansible-lint
+    #   uses: ansible/ansible-lint-action@v4.1.0.post0
+    #   with:
+    #     targets: "roles/opendistro_elasticsearch/molecule/default/playbook.yml"
     # - name: Move project to Ansible-required location
     #   run: |
     #     cd roles/opendistro_elasticsearch
