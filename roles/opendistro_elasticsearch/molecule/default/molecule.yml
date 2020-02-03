@@ -5,6 +5,8 @@ driver:
   name: docker
 lint:
   name: yamllint
+  options:
+    config-file: molecule/default/yaml-lint.yml
 platforms:
   - name: instance
     image: centos:7
@@ -12,6 +14,21 @@ provisioner:
   name: ansible
   lint:
     name: ansible-lint
+    enabled: true
+    options:
+      x:
+        - ANSIBLE0011
+scenario:
+  name: default
+  test_sequence:
+    - lint
+    - destroy
+    - dependency
+    - syntax
+    - create
+    - prepare
+    - converge
+    - verify
 verifier:
   name: testinfra
   lint:
