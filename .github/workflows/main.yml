@@ -21,20 +21,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install --upgrade ansible
         pip install ansible docker 'molecule[docker]'
-    # - name: ansible-lint
-    #   uses: ansible/ansible-lint-action@v4.1.0.post0
-    #   with:
-    #     targets: "roles/opendistro_elasticsearch/molecule/default/playbook.yml"
-    # - name: Move project to Ansible-required location
-    #   run: |
-    #     cd roles/opendistro_elasticsearch
-    - name: Move project to Ansible-required location
-      run: |
-        mkdir -p ~/.ansible/collections/ansible_collections/lyr/opendistrocollection
-        cp -r ./ ~/.ansible/collections/ansible_collections/lyr/opendistrocollection
     - name: Molecule test
       run: |
-        molecule test
+        cd roles/opendistro_elasticsearch/ && molecule test
     - name: Deploy Ansible Galaxy Collection
       uses: artis3n/ansible_galaxy_collection@v1.0.10
       with:
