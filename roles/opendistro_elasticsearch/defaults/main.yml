@@ -19,3 +19,10 @@ opendistroforelasticsearch_http_port: 9200
 opendistroforelasticsearch_java_home: "{{ __opendistroforelasticsearch_java_home }}"
 opendistroforelasticsearch_extra_plugin_files: []
 opendistroforelasticsearch_include_role_x509_certificate: yes
+opendistroforelasticsearch_redhat_repo_url: "https://d3g5vo6xdbdb9a.cloudfront.net/yum/opendistroforelasticsearch-artifacts.repo"
+
+es_use_repository: false
+es_version: "7.3.2"
+es_major_version: "7.x"
+es_repo_url: https://artifacts.elastic.co/packages/oss-{{ es_major_version }}/yum
+es_repo_name: "{{ es_major_version }}"

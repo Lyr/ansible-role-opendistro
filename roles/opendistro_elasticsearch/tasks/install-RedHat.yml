@@ -1,14 +1,32 @@
 ---
+- name: add Elasticsearch repo
+  become: yes
+  template:
+    src: elasticsearch.repo.j2
+    dest: /etc/yum.repos.d/elasticsearch-{{ es_repo_name }}.repo
+  when: es_use_repository
+
+- name: download OpenDistro repo
+  become: yes
+  get_url:
+    # url: "https://d3g5vo6xdbdb9a.cloudfront.net/yum/opendistroforelasticsearch-artifacts.repo"
+    url: "{{ opendistroforelasticsearch_redhat_repo_url }}"
+    dest: /etc/yum.repos.d/opendistroforelasticsearch-artifacts.repo
+  when: es_use_repository is false
+
 
 - name: Install opendistroforelasticsearch_extra_packages
   yum:
     name: "{{ opendistroforelasticsearch_extra_packages }}"
     state: present
+    update_cache: yes
+
 
 - name: Install opendistroforelasticsearch_package
   yum:
     name: "{{ opendistroforelasticsearch_package }}"
     state: present
+    update_cache: yes
 
 - name: Create /etc/sysconfig/elasticsearch
   template:
