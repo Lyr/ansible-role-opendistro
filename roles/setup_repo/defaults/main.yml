@@ -1,0 +1,6 @@
+---
+es_use_repository: true
+es_major_version: "7.x"
+es_repo_url: https://artifacts.elastic.co/packages/oss-{{ es_major_version }}/yum
+es_repo_name: "{{ es_major_version }}"
+opendistroforelasticsearch_redhat_repo_gpgcheck: false

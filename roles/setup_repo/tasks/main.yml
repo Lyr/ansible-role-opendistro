@@ -1,0 +1,3 @@
+---
+- name: "Include setup-{{ ansible_os_family }}.yml"
+  include: "setup-{{ ansible_os_family }}.yml"

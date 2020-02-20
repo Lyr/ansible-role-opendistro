@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Lyr
-  description: role to provide an opendistro cluster (with or not kibana)
+  description: role to setup an opendistro repository on hosts
   company: Yl-Co
   license: MIT
 
@@ -13,4 +13,4 @@ galaxy_info:
 
   galaxy_tags: ["opendistro", "elasticsearch", "aws", "kibana"]
 
-dependencies: [setup_reop]
+dependencies: []
