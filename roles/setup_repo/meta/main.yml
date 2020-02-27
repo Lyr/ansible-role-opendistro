@@ -14,3 +14,4 @@ galaxy_info:
   galaxy_tags: ["opendistro", "elasticsearch", "aws", "kibana"]
 
 dependencies: []
+collections: [ 'opendistro' ]
